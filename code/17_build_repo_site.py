@@ -189,14 +189,14 @@ HTML = """<!doctype html>
       <div class="stat"><b>3,659</b><span>country-years, 169 countries</span></div>
     </div>
     <nav class="repo">
-      <a href="README.md">Read me first</a>
-      <a href="code/">Analysis code <code>01&ndash;16</code></a>
-      <a href="data/processed/">Processed panels</a>
-      <a href="results/">Estimation output <code>*.json</code></a>
-      <a href="docs/DATA_DICTIONARY.md">Data dictionary</a>
-      <a href="docs/LINKAGE.md">How the sources are merged</a>
-      <a href="docs/OPENALEX_QUERIES.md">OpenAlex queries</a>
-      <a href="docs/SUPPLEMENTARY_TABLES.md">Supplementary tables S1&ndash;S12</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin">Read me first</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/tree/main/code">Analysis code <code>01&ndash;17</code></a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/tree/main/data/processed">Processed panels</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/tree/main/results">Estimation output <code>*.json</code></a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/blob/main/docs/DATA_DICTIONARY.md">Data dictionary</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/blob/main/docs/LINKAGE.md">How the sources are merged</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/blob/main/docs/OPENALEX_QUERIES.md">OpenAlex queries</a>
+      <a href="https://github.com/upocuantitativo/agri-ai-input-margin/blob/main/docs/SUPPLEMENTARY_TABLES.md">Supplementary tables S1&ndash;S12</a>
     </nav>
   </header>
 
