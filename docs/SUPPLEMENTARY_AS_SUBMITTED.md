@@ -1,7 +1,62 @@
-# Supplementary tables
+# Supplementary material
 
-The full tables cut from the manuscript to meet the 10,000-word limit of *Economics of
-Innovation and New Technology*. Every number here is transcribed from `results/*.json`;
+Fewer inputs, not more yield: agricultural AI and its digital complements
+
+This file collects the material moved out of the main text to meet the 10,000-word limit. Every number is transcribed from the estimation output deposited in the replication repository, and each table names the JSON file and key that produced it, so that any figure can be traced back to the object that generated it.
+
+## Supplementary figures
+
+
+Figure S1. World production by major crop group and the core3 aggregate (cereals, roots and tubers, pulses), 1961–2023 (FAOSTAT).
+
+![Figure S1](FigureS1.png)
+
+Figure S2. World cereal yield and its annual growth rate (10-year moving average), 1961–2023 (FAOSTAT).
+
+![Figure S2](FigureS2.png)
+
+Figure S3. Spain: hectares of arable land per tractor, 1961–2009 (FAOSTAT).
+
+![Figure S3](FigureS3.png)
+
+Figure S4. Cereal yield versus nitrogen applied, and partial productivity of nitrogen, 1961–2023.
+
+![Figure S4](FigureS4.png)
+
+Figure S5. σ-convergence: dispersion of log cereal yield across countries, and the absolute β-convergence test.
+
+![Figure S5](FigureS5.png)
+
+Figure S6. Median cereal yield by income group (kg/ha).
+
+![Figure S6](FigureS6.png)
+
+Figure S7. Permutation importance of the predictors in the gradient boosting model (test set).
+
+![Figure S7](FigureS7.png)
+
+Figure S8. Generic versus specific: yield prediction error under the temporal holdout (≥ 2010).
+
+![Figure S8](FigureS8.png)
+
+Figure S9. World agricultural employment (% of total, population-weighted), and agricultural employment versus labour productivity by country-year.
+
+![Figure S9](FigureS9.png)
+
+Figure S10. Partial dependence of log cereal yield on the nitrogen dose and the irrigation share (gradient boosting).
+
+![Figure S10](FigureS10.png)
+
+Figure S11. Event study for nitrogen use efficiency, base year 2015. Pre-2016 coefficients are not jointly null and no discrete break follows 2016, so the parallel-trends assumption fails and the difference-in-differences estimate is reported as descriptive only.
+
+![Figure S11](FigureS11.png)
+
+*Note on resolution:* Figures S1–S10 were produced at 130 dpi and Figure S11 at 200 dpi. They are supplied at source resolution rather than upscaled; they can be regenerated at any resolution from the analysis scripts in the replication repository.
+
+
+## Supplementary tables
+
+The full tables cut from the main text. Every number here is transcribed from `results/*.json`;
 the JSON file and key are named under each table so any figure can be traced to the object
 that produced it. Where the manuscript and the JSON disagree, both are reported — see
 [Known numeric disagreements](#known-numeric-disagreements) at the end.
@@ -25,10 +80,11 @@ underlying values.
 | [S9](#table-s9) | World OpenAlex series, 2000–2024 | HA1–HA4 | `12_ai_observable.json` |
 | [S10](#table-s10) | Event-study coefficients, base year 2015 | HA4 | `12_ai_observable.json` |
 | [S11](#table-s11) | Permutation importance and input-interaction coefficients | H1 | `06`, `10` |
+| [S12](#table-s12) | Hypothesis to analysis to metric map | all | study design |
 
 ---
 
-## Table S1
+### Table S1
 
 ### Univariate versus full-package predictive power (H1)
 
@@ -56,7 +112,7 @@ predicting the sample mean. Source: `results/06_yield_models.json`,
 
 ---
 
-## Table S2
+### Table S2
 
 ### Yield prediction by generalisation regime (H3)
 
@@ -92,7 +148,7 @@ Source: `results/06_yield_models.json`, `testA_ML_vs_OLS`.
 
 ---
 
-## Table S3
+### Table S3
 
 ### Local context: temporal extrapolation versus spatial transfer, all architectures (H4)
 
@@ -150,7 +206,7 @@ input slopes during training, not from remembering country means. Sources:
 
 ---
 
-## Table S4
+### Table S4
 
 ### Gains by technological era (HA4)
 
@@ -175,7 +231,7 @@ aggregates, not an estimate of AI's effect. Source: `results/12_ai_observable.js
 
 ---
 
-## Table S5
+### Table S5
 
 ### The eight robustness re-estimations of the nitrogen-efficiency result
 
@@ -208,7 +264,7 @@ Sample sizes vary because each specification drops on its own regressors. Source
 
 ---
 
-## Table S6
+### Table S6
 
 ### Region-to-region transfer matrix and region-specific nitrogen elasticities (HA5)
 
@@ -258,7 +314,7 @@ below the 300-observation threshold and are excluded from the matrix; see
 
 ---
 
-## Table S7
+### Table S7
 
 ### Convergence results (H6)
 
@@ -305,7 +361,7 @@ samples (144 vs 142 countries); the manuscript quotes the second. Sources:
 
 ---
 
-## Table S8
+### Table S8
 
 ### Traceability: source claim → hypothesis → empirical verdict
 
@@ -337,7 +393,7 @@ underlying numbers.
 
 ---
 
-## Table S9
+### Table S9
 
 ### World OpenAlex series, 2000–2024
 
@@ -400,7 +456,7 @@ the median low-income country. 2024 counts are provisional in any OpenAlex snaps
 
 ---
 
-## Table S10
+### Table S10
 
 ### Event-study coefficients, base year 2015 (HA4)
 
@@ -455,7 +511,7 @@ descriptive only. None of the paper's AI-specific claims rest on it. Source:
 
 ---
 
-## Table S11
+### Table S11
 
 ### Permutation importance and input-interaction coefficients (H1)
 
@@ -500,7 +556,7 @@ Sources: `results/06_yield_models.json` (`testB_importancia`),
 
 ---
 
-## Known numeric disagreements
+### Known numeric disagreements
 
 Where `results/*.json` and `article/manuscrito_EN_v2.md` do not match, or where two scripts
 estimate the same object differently. **None of these changes a substantive conclusion**,
@@ -508,10 +564,10 @@ but all are recorded rather than silently reconciled.
 
 | # | Quantity | `results/*.json` | Manuscript | Assessment |
 |---|---|---|---|---|
-| 1 | **HA1 sample size** | `12_ai_observable.json` → `n_obs = 3716` | §4.8: "3,715 observations from 168 countries" | **Genuine disagreement of one observation.** Re-running the HA1 listwise deletion on the shipped CSVs reproduces **3,716**. The manuscript figure equals the HA3 sample (3,715), which is one row smaller because HA3 also requires a defined complement index `z_comp`. The estimate (+0.0308, p = 0.0467) is unaffected. |
+| 1 | **HA1 sample size** | `12_ai_observable.json` → `n_obs = 3716` | §4.8 of the submitted version states 3,716 (corrected) | **Genuine disagreement of one observation.** Re-running the HA1 listwise deletion on the shipped CSVs reproduces **3,716**. The manuscript figure equals the HA3 sample (3,715), which is one row smaller because HA3 also requires a defined complement index `z_comp`. The estimate (+0.0308, p = 0.0467) is unaffected. |
 | 2 | **Absolute β-convergence** | `05_convergence.json`: β = +0.00092, p = 0.579, n = 144 · `10_revision_analyses.json`: β = +0.00206, p = 0.248, n = 142 | §4.6 quotes β = +0.002, p = 0.25 | **Two scripts, two samples** (144 vs 142 countries; the second is the balanced panel). Both are reported in [S7](#table-s7). Both are flat and insignificant, so the verdict — no absolute convergence — is identical. |
-| 3 | **Yield × complements interaction (HA2 panel C)** | `−0.004465`, p = 0.6426 | Table 5: "−0.005 (p = 0.643)" | **Rounding only.** −0.004465 rounds to −0.004 at three decimals; the manuscript prints −0.005. Both are statistically indistinguishable from zero, which is the claim being made. |
-| 4 | **Inputs-only R² under spatial transfer** | `06_yield_models.json` GroupKFold GB: 0.4157, RMSE 2,021.3 · `10_revision_analyses.json`: 0.4199, RMSE 2,015.6 | Tables S2 and S3 use 0.42 / 2,021 and 0.42 / 2,016 respectively | **Two scripts estimating the same object** with slightly different pipelines. Both round to R² = 0.42, so the manuscript's two tables are consistent to the precision printed, but the RMSEs differ by 6 kg/ha. Both are given in [S2](#table-s2) and [S3](#table-s3). |
+| 3 | **Yield × complements interaction (HA2 panel C)** | `−0.004465`, p = 0.6426 | Table 2 of the submitted version: −0.004 (p = 0.643) | **Rounding only.** −0.004465 rounds to −0.004 at three decimals; the manuscript prints −0.005. Both are statistically indistinguishable from zero, which is the claim being made. |
+| 4 | **Inputs-only R² under spatial transfer** | `06_yield_models.json` GroupKFold GB: 0.4157, RMSE 2,021.3 · `10_revision_analyses.json`: 0.4199, RMSE 2,015.6 | Tables S2 and S3 below use 0.42 / 2,021 and 0.42 / 2,016 respectively | **Two scripts estimating the same object** with slightly different pipelines. Both round to R² = 0.42, so the manuscript's two tables are consistent to the precision printed, but the RMSEs differ by 6 kg/ha. Both are given in [S2](#table-s2) and [S3](#table-s3). |
 | 5 | **DiD coefficient on nitrogen efficiency** | `HA4…DiD`: +0.0948, n = 3,738, p = 0.028 · `ROB_robustez` baseline: +0.0985, n = 3,794, p = 0.023 | §4.11 quotes +0.095; §4.13's alternatives are all relative to the ROB baseline | **Not a contradiction**: the same specification on two samples. `block_HA4` imposes the three-outcome common sample; `block_ROB` drops only on `log_nue` and the two controls, recovering 56 country-years. Both are reported, in [S10](#table-s10) and [S5](#table-s5) respectively. |
 | 6 | **Univariate R² for `year`** | −0.0079 | the submitted manuscript omits the row | **Omission, not conflict.** Restored in [S1](#table-s1). |
 
@@ -524,3 +580,28 @@ Two further points of interpretation, flagged because a replicator will meet the
 - **`irrig_share_cropland` exceeds 100 % for some country-years** (maximum 450). This is a
   property of the FAOSTAT source — area *equipped for irrigation* can include agricultural
   land that is not cropland — and it is used as delivered, unclipped, in every model.
+
+
+### Table S12
+
+#### Hypothesis to analysis to metric map
+
+| Hypothesis | Analysis | Main metric |
+|---|---|---|
+| H1 package | Univariate R² of each input vs. full package; permutation importance; interaction test | R² (temporal holdout); ΔR² from interactions |
+| H2 diminishing returns | Decadal yield growth rates; partial productivity of N; partial dependence | %/year; kg·ha⁻¹/Mt N; partial-dependence (PD) slope |
+| H3 ML vs. traditional | OLS vs. Random Forest vs. Gradient Boosting under two regimes | R², root mean squared error (RMSE) in temporal holdout and country GroupKFold |
+| H4 local context | Inputs-only vs. +geography model, under temporal holdout and spatial transfer; variance decomposition | RMSE; R²; transferable vs. non-transferable ΔR² |
+| H5 employment | Panel regression with country and year fixed effects; exogenous measure (mechanisation) | association (sign, significance) |
+| H6 inequality | σ-convergence (full and balanced panel) and absolute and conditional β-convergence | standard deviation (SD) of log-yield; β |
+| HA1 algorithm not scarce | Two-way FE of log yield on AI intensity, inputs controlled | coefficient per SD of AI |
+| HA2 margin and conditionality | Common-sample decomposition into yield, nitrogen dose and nitrogen efficiency; interaction with predetermined complements; horse race vs. non-AI research | coefficient per SD; interaction; marginal effects at P10/P50/P90 |
+| HA3 not generic | Same interaction specification applied to fertiliser, mechanisation, AI and a non-AI placebo | sign and size of technology × complements interaction |
+| HA4 era comparison | Era growth rates of yield, nitrogen dose and nitrogen efficiency; continuous-treatment DiD with event study | %/year; DiD coefficient; pre-trend diagnostics |
+| HA5 transferability | Train-on-region, test-on-region transfer matrix; region-specific nitrogen elasticities | R² within vs. across region; elasticity range |
+
+*Note:* H7 (adoption is conditioned by institutional complements) is supported documentarily and is not tested against data in this study.
+
+### Table numbering
+
+The submitted manuscript contains Tables 1 (data blocks), 2 (HA2, where the value of AI appears) and 3 (HA3, four technological waves), and Figures 1–5. The three pre-AI results tables of earlier drafts are Tables S1–S3 here, and the earlier Figures 1–10 are Figures S1–S10.
