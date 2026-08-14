@@ -1,0 +1,93 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite both the software/dataset entry below and the associated article."
+title: "Replication package: agricultural AI, input-use efficiency and digital complements (FAOSTAT + World Bank + OpenAlex, 1961-2024)"
+abstract: >-
+  Code, processed data, estimation output and documentation replicating
+  "Not more yield, but fewer inputs: an observable measure of agricultural artificial
+  intelligence and the margin on which its value appears (1961-2024)". The package builds a
+  country-year measure of agricultural-AI research activity from OpenAlex (2000-2024) and
+  merges it by ISO3 code and year with a FAOSTAT + World Bank panel of agricultural
+  performance for 172 countries, 1961-2023. It shows that AI's measurable return appears as
+  nitrogen-use-efficiency gains conditional on predetermined digital complements, not as
+  yield gains.
+type: software
+version: "1.0.0"
+date-released: "2026-08-14"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/upocuantitativo/agri-ai-input-margin"
+url: "https://github.com/upocuantitativo/agri-ai-input-margin"
+doi: "<TO CONFIRM: repository DOI, e.g. Zenodo>"
+
+authors:
+  - family-names: "<TO CONFIRM: author family name>"
+    given-names: "<TO CONFIRM: author given name>"
+    orcid: "<TO CONFIRM: https://orcid.org/0000-0000-0000-0000>"
+    email: "<TO CONFIRM: contact e-mail>"
+    affiliation: "<TO CONFIRM: institutional affiliation>"
+
+keywords:
+  - artificial intelligence
+  - agricultural economics
+  - input-use efficiency
+  - nitrogen use efficiency
+  - technological complementarity
+  - precision agriculture
+  - spatial transferability
+  - bibliometrics
+  - OpenAlex
+  - FAOSTAT
+  - panel data
+
+preferred-citation:
+  type: article
+  title: "Not more yield, but fewer inputs: an observable measure of agricultural artificial intelligence and the margin on which its value appears (1961-2024)"
+  authors:
+    - family-names: "<TO CONFIRM: author family name>"
+      given-names: "<TO CONFIRM: author given name>"
+      orcid: "<TO CONFIRM: https://orcid.org/0000-0000-0000-0000>"
+  journal: "Economics of Innovation and New Technology"
+  publisher:
+    name: "Taylor & Francis"
+  year: "<TO CONFIRM: publication year — must be an integer for CFF validation>"
+  volume: "<TO CONFIRM: volume>"
+  issue: "<TO CONFIRM: issue>"
+  start: "<TO CONFIRM: first page>"
+  end: "<TO CONFIRM: last page>"
+  doi: "<TO CONFIRM: article DOI>"
+
+references:
+  - type: database
+    title: "FAOSTAT statistical databases (QCL, RFN, RL, RM, ET)"
+    authors:
+      - name: "Food and Agriculture Organization of the United Nations"
+    url: "https://www.fao.org/faostat/"
+    year: 2026
+    notes: "Accessed <TO CONFIRM: FAOSTAT access date>; downloaded files timestamped 2026-06-29."
+  - type: database
+    title: "World Development Indicators"
+    authors:
+      - name: "World Bank"
+    url: "https://data.worldbank.org/"
+    year: 2026
+    notes: "Accessed <TO CONFIRM: World Bank access date>; downloaded files timestamped 2026-06-29 and 2026-08-07."
+  - type: database
+    title: "OpenAlex: an open and comprehensive catalog of scholarly papers, authors, institutions and concepts"
+    authors:
+      - name: "OurResearch"
+    url: "https://openalex.org/"
+    year: 2026
+    notes: "Works API. Accessed <TO CONFIRM: OpenAlex access date>; downloaded files timestamped 2026-08-07."
+  - type: article
+    title: "OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts"
+    authors:
+      - family-names: "Priem"
+        given-names: "Jason"
+      - family-names: "Piwowar"
+        given-names: "Heather"
+      - family-names: "Orr"
+        given-names: "Richard"
+    year: 2022
+    journal: "arXiv preprint arXiv:2205.01833"
+    doi: "10.48550/arXiv.2205.01833"

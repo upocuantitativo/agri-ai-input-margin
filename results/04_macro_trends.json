@@ -1,0 +1,66 @@
+{
+  "produccion_mundial": {
+    "claim_documento": "1.800 -> 4.600 millones t (cereales+raices/tuberculos+legumbres+oleaginosas)",
+    "anio_inicial": 1961,
+    "anio_final": 2024,
+    "total_core3_inicial_Mt": 1373.0,
+    "total_core3_final_Mt": 4174.4,
+    "cereales_inicial_Mt": 876.9,
+    "cereales_final_Mt": 3133.2,
+    "factor_multiplicador_core3": 3.04
+  },
+  "rendimiento_cereal_mundial": {
+    "claim_documento": "crecimiento del rendimiento cereal se desacelero de 3,2%/anio (1960) a 1,5%/anio (2000)",
+    "unidad": "kg/ha",
+    "por_decada": [
+      {
+        "decada": "1961-1970",
+        "cagr_endpoints_%": 3.0,
+        "tasa_loglineal_%/anio": 2.94
+      },
+      {
+        "decada": "1971-1980",
+        "cagr_endpoints_%": 1.49,
+        "tasa_loglineal_%/anio": 1.95
+      },
+      {
+        "decada": "1981-1990",
+        "cagr_endpoints_%": 2.3,
+        "tasa_loglineal_%/anio": 1.79
+      },
+      {
+        "decada": "1991-2000",
+        "cagr_endpoints_%": 1.47,
+        "tasa_loglineal_%/anio": 1.65
+      },
+      {
+        "decada": "2001-2010",
+        "cagr_endpoints_%": 1.43,
+        "tasa_loglineal_%/anio": 1.7
+      },
+      {
+        "decada": "2011-2023",
+        "cagr_endpoints_%": 1.22,
+        "tasa_loglineal_%/anio": 1.21
+      }
+    ]
+  },
+  "mecanizacion_espana": {
+    "claim_documento": "600 ha/tractor (1958) -> ~50 ha/tractor (finales 70s); FAOSTAT tractores desde 1961",
+    "ha_por_tractor_1961": 229.0,
+    "ha_por_tractor_1978": 34.0,
+    "ha_por_tractor_2009": 12.0,
+    "tractores_1961": 71077.0,
+    "tractores_2009": 1038726.0
+  },
+  "nitrogeno_rendimientos_decrecientes": {
+    "claim_documento": "rendimientos decrecientes / efecto rebote: mas insumos con retornos marginales menores",
+    "N_mundial_inicial_Mt": 11.5,
+    "N_mundial_final_Mt": 111.6,
+    "anio_ini": 1961,
+    "anio_fin": 2023,
+    "pendiente_rendimiento_vs_logN": 1269.8,
+    "productividad_parcial_N_ini": 117.817,
+    "productividad_parcial_N_fin": 37.891
+  }
+}

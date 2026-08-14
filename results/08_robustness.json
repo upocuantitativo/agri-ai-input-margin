@@ -1,0 +1,41 @@
+{
+  "dependencia_parcial_N": {
+    "pendiente_tramo_bajo": 0.00864,
+    "pendiente_tramo_alto": 0.00329,
+    "ratio_alto_sobre_bajo": 0.381,
+    "interpretacion": "la respuesta marginal del rendimiento al N decae a dosis altas (rendimientos decrecientes)"
+  },
+  "sensibilidad_corte_holdout": [
+    {
+      "corte": 2005,
+      "rmse_generico": 2517.6,
+      "r2_generico": 0.6236,
+      "rmse_inputs+geo": 2023.5,
+      "r2_inputs+geo": 0.754,
+      "reduccion_error_%": 19.6
+    },
+    {
+      "corte": 2010,
+      "rmse_generico": 2586.4,
+      "r2_generico": 0.6839,
+      "rmse_inputs+geo": 1935.3,
+      "r2_inputs+geo": 0.7913,
+      "reduccion_error_%": 25.2
+    },
+    {
+      "corte": 2015,
+      "rmse_generico": 2137.5,
+      "r2_generico": 0.7408,
+      "rmse_inputs+geo": 1530.3,
+      "r2_inputs+geo": 0.8256,
+      "reduccion_error_%": 28.4
+    }
+  ],
+  "sigma_convergencia_ponderada_pob": {
+    "sd_ini": 0.468,
+    "anio_ini": 1961,
+    "sd_fin": 0.603,
+    "anio_fin": 2024,
+    "tendencia": "divergencia"
+  }
+}

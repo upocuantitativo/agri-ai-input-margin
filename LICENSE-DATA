@@ -1,0 +1,60 @@
+# Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 `<TO CONFIRM: copyright holder / author name>`
+
+**Scope.** This licence applies to the *derived* content of this repository: the processed
+datasets in `data/processed/`, the estimation output in `results/`, the figures in
+`figures/`, and the documentation in `docs/` and `README.md`. The source code in `code/` is
+licensed separately under the MIT Licence; see `LICENSE-CODE`.
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format;
+- **Adapt** — remix, transform, and build upon the material for any purpose, even
+  commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the licence terms.
+
+Under the following terms:
+
+- **Attribution** — You must give appropriate credit, provide a link to the licence, and
+  indicate if changes were made. You may do so in any reasonable manner, but not in any way
+  that suggests the licensor endorses you or your use.
+- **No additional restrictions** — You may not apply legal terms or technological measures
+  that legally restrict others from doing anything the licence permits.
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+---
+
+## Upstream terms — important
+
+The files in `data/processed/` are transformations of three third-party sources. This
+licence covers only the selection, arrangement and derivation performed here; it cannot and
+does not relicense the underlying data. Redistributors must observe the upstream terms,
+which in one case are **more restrictive than CC BY 4.0**:
+
+| Upstream source | Columns derived from it | Upstream licence |
+|---|---|---|
+| **FAOSTAT** (FAO) | `n_total_t`, `n_kg_ha`, `p_kg_ha`, `k_kg_ha`, `arable_kha`, `cropland_kha`, `agri_land_kha`, `irrig_equip_kha`, `irrig_actual_kha`, `tractors`, `temp_anom`, and the derived `tractors_per_1000ha_arable`, `irrig_share_cropland`; all of `qcl_world_raw.csv`, `world_production_long.csv`, `world_yield_long.csv`, `world_N.csv`, `world_temp.csv`, `spain_series.csv` | **CC BY-NC-SA 3.0 IGO** — non-commercial, share-alike |
+| **World Bank Open Data** | every column in `wb_panel.csv`; the World Bank block of `country_panel.csv`; the indicator columns of `ai_panel.csv`; all of `country_meta.csv` | **CC BY 4.0** |
+| **OpenAlex** (OurResearch) | `oa_ai_ag`, `oa_ai_all`, `oa_precision_ag`, `oa_works_all` in `ai_panel.csv` | **CC0 1.0** (public domain dedication) |
+
+In particular, **`country_panel.csv` mixes FAOSTAT and World Bank columns**, so anyone
+redistributing that file in full should treat it as carrying FAOSTAT's non-commercial and
+share-alike conditions. The same applies to any figure or table derived from the FAOSTAT
+columns.
+
+## How to attribute
+
+> `<TO CONFIRM: author name>` (2026). *Replication package for "Not more yield, but fewer
+> inputs: an observable measure of agricultural artificial intelligence and the margin on
+> which its value appears (1961–2024)"*. `<TO CONFIRM: repository URL / DOI>`.
+> Derived from FAOSTAT (FAO), World Bank Open Data and OpenAlex.
+
+## Disclaimer
+
+The material is provided "as is", without warranties or conditions of any kind, either
+express or implied. Neither the FAO, the World Bank, nor OurResearch endorses this work or
+any derivative of it.

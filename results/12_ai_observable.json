@@ -1,0 +1,1131 @@
+{
+  "A_descriptivos_IA": {
+    "definicion": "Obras indexadas en OpenAlex cuyo titulo o resumen combina terminos de IA (artificial intelligence, machine learning, deep learning, neural network) con terminos agricolas, contadas por pais de afiliacion y anio (2000-2024).",
+    "obras_mundo_2000": 69,
+    "obras_mundo_2024": 21100,
+    "multiplicador_2000_2024": 305.7971014492754,
+    "cuota_permil_2000": 0.044425014760050195,
+    "cuota_permil_2024": 2.547679335797056,
+    "crecimiento_anual_pct_2000_2015": 15.829672480542495,
+    "crecimiento_anual_pct_2016_2024": 42.45250285358532,
+    "precision_ag_2000": 129,
+    "precision_ag_2024": 6315,
+    "mediana_obras_por_millon_2019_2023_por_renta": {
+      "High income": 1.7545,
+      "Low income": 0.0,
+      "Lower middle income": 0.1738,
+      "Not classified": 0.1622,
+      "Upper middle income": 0.3517
+    },
+    "serie_mundial": [
+      {
+        "year": 2000,
+        "ai_ag": 69.0,
+        "pa": 129.0,
+        "allw": 1553179.0,
+        "share_permil": 0.044425014760050195
+      },
+      {
+        "year": 2001,
+        "ai_ag": 57.0,
+        "pa": 135.0,
+        "allw": 1627635.0,
+        "share_permil": 0.03502013657853266
+      },
+      {
+        "year": 2002,
+        "ai_ag": 73.0,
+        "pa": 179.0,
+        "allw": 2058044.0,
+        "share_permil": 0.03547057302953678
+      },
+      {
+        "year": 2003,
+        "ai_ag": 93.0,
+        "pa": 214.0,
+        "allw": 2091559.0,
+        "share_permil": 0.04446444016162107
+      },
+      {
+        "year": 2004,
+        "ai_ag": 119.0,
+        "pa": 224.0,
+        "allw": 2250671.0,
+        "share_permil": 0.05287312094926357
+      },
+      {
+        "year": 2005,
+        "ai_ag": 102.0,
+        "pa": 191.0,
+        "allw": 2506998.0,
+        "share_permil": 0.04068611143686592
+      },
+      {
+        "year": 2006,
+        "ai_ag": 133.0,
+        "pa": 204.0,
+        "allw": 2851383.0,
+        "share_permil": 0.046644032036383745
+      },
+      {
+        "year": 2007,
+        "ai_ag": 152.0,
+        "pa": 277.0,
+        "allw": 3032055.0,
+        "share_permil": 0.050131016752664445
+      },
+      {
+        "year": 2008,
+        "ai_ag": 203.0,
+        "pa": 289.0,
+        "allw": 3348272.0,
+        "share_permil": 0.06062828826331911
+      },
+      {
+        "year": 2009,
+        "ai_ag": 240.0,
+        "pa": 326.0,
+        "allw": 3600584.0,
+        "share_permil": 0.06665585360597058
+      },
+      {
+        "year": 2010,
+        "ai_ag": 291.0,
+        "pa": 333.0,
+        "allw": 3847693.0,
+        "share_permil": 0.07562973449285065
+      },
+      {
+        "year": 2011,
+        "ai_ag": 364.0,
+        "pa": 445.0,
+        "allw": 4183660.0,
+        "share_permil": 0.08700515816294824
+      },
+      {
+        "year": 2012,
+        "ai_ag": 399.0,
+        "pa": 406.0,
+        "allw": 4379561.0,
+        "share_permil": 0.0911050217133635
+      },
+      {
+        "year": 2013,
+        "ai_ag": 411.0,
+        "pa": 429.0,
+        "allw": 4671811.0,
+        "share_permil": 0.08797444930884404
+      },
+      {
+        "year": 2014,
+        "ai_ag": 483.0,
+        "pa": 403.0,
+        "allw": 4919202.0,
+        "share_permil": 0.09818665710414007
+      },
+      {
+        "year": 2015,
+        "ai_ag": 607.0,
+        "pa": 603.0,
+        "allw": 5080633.0,
+        "share_permil": 0.11947330185037967
+      },
+      {
+        "year": 2016,
+        "ai_ag": 786.0,
+        "pa": 647.0,
+        "allw": 5266625.0,
+        "share_permil": 0.14924168703866328
+      },
+      {
+        "year": 2017,
+        "ai_ag": 1151.0,
+        "pa": 931.0,
+        "allw": 5550038.0,
+        "share_permil": 0.2073859674474301
+      },
+      {
+        "year": 2018,
+        "ai_ag": 1821.0,
+        "pa": 1214.0,
+        "allw": 6048825.0,
+        "share_permil": 0.3010502039652329
+      },
+      {
+        "year": 2019,
+        "ai_ag": 3389.0,
+        "pa": 1720.0,
+        "allw": 6555968.0,
+        "share_permil": 0.5169335786873883
+      },
+      {
+        "year": 2020,
+        "ai_ag": 5371.0,
+        "pa": 2269.0,
+        "allw": 7536795.0,
+        "share_permil": 0.712637135546343
+      },
+      {
+        "year": 2021,
+        "ai_ag": 8092.0,
+        "pa": 2710.0,
+        "allw": 7811826.0,
+        "share_permil": 1.0358653661768709
+      },
+      {
+        "year": 2022,
+        "ai_ag": 11493.0,
+        "pa": 3286.0,
+        "allw": 8288810.0,
+        "share_permil": 1.386568156345724
+      },
+      {
+        "year": 2023,
+        "ai_ag": 15272.0,
+        "pa": 4516.0,
+        "allw": 8251924.0,
+        "share_permil": 1.8507199048367386
+      },
+      {
+        "year": 2024,
+        "ai_ag": 21100.0,
+        "pa": 6315.0,
+        "allw": 8282047.0,
+        "share_permil": 2.547679335797056
+      }
+    ]
+  },
+  "HA1_efecto_incondicional_IA_sobre_rendimiento": {
+    "n_obs": 3716,
+    "n_paises": 168,
+    "periodo": [
+      2000,
+      2023
+    ],
+    "especificacion": "FE pais + FE anio, EE agrupados por pais, insumos controlados",
+    "z_ai": {
+      "b": 0.03075022440077618,
+      "se": 0.015463211505545662,
+      "t": 1.9886053029636208,
+      "p": 0.046744785617061295
+    },
+    "lectura": "La narrativa algoritmo-centrica predice un efecto claro sobre el NIVEL de rendimiento. El coeficiente es pequeno y fragil."
+  },
+  "HA2_margen_de_valor_y_complementariedad": {
+    "muestra_comun": {
+      "n_obs": 3659,
+      "n_paises": 169,
+      "periodo": [
+        2000,
+        2023
+      ]
+    },
+    "margen_volumen": {
+      "log_yield": {
+        "etiqueta": "rendimiento (nivel de produccion)",
+        "z_ai": {
+          "b": 0.018797898566817413,
+          "se": 0.016773242677018043,
+          "t": 1.1207074820764065,
+          "p": 0.2624123963197085
+        }
+      },
+      "log_n_x": {
+        "etiqueta": "dosis de nitrogeno (insumo)",
+        "z_ai": {
+          "b": -0.08073093437115514,
+          "se": 0.019962648174983753,
+          "t": -4.044099443295471,
+          "p": 5.252462351102193e-05
+        }
+      },
+      "log_nue": {
+        "etiqueta": "eficiencia del nitrogeno (kg grano / kg N)",
+        "z_ai": {
+          "b": 0.09952883293797263,
+          "se": 0.022018192695598588,
+          "t": 4.520299840861522,
+          "p": 6.175210648012573e-06
+        }
+      }
+    },
+    "margen_especializacion": {
+      "log_yield": {
+        "etiqueta": "rendimiento (nivel de produccion)",
+        "z_spec": {
+          "b": 0.03057151482375053,
+          "se": 0.01453530903796462,
+          "t": 2.1032586747141813,
+          "p": 0.03544316375891435
+        }
+      },
+      "log_n_x": {
+        "etiqueta": "dosis de nitrogeno (insumo)",
+        "z_spec": {
+          "b": -0.019061539738776476,
+          "se": 0.016155140003913587,
+          "t": -1.1799055739633835,
+          "p": 0.23803777271508897
+        }
+      },
+      "log_nue": {
+        "etiqueta": "eficiencia del nitrogeno (kg grano / kg N)",
+        "z_spec": {
+          "b": 0.04963305456252709,
+          "se": 0.020270315125444412,
+          "t": 2.448558606778883,
+          "p": 0.014342909401160562
+        }
+      }
+    },
+    "carrera_IA_vs_investigacion_general": {
+      "log_yield": {
+        "etiqueta": "rendimiento (nivel de produccion)",
+        "z_spec": {
+          "b": 0.02954145911756343,
+          "se": 0.014716678717022398,
+          "t": 2.0073455217442233,
+          "p": 0.04471288523449447
+        },
+        "z_res_investigacion_no_IA": {
+          "b": 0.12045338688088923,
+          "se": 0.05428897054989287,
+          "t": 2.2187450905923822,
+          "p": 0.02650407152704296
+        }
+      },
+      "log_n_x": {
+        "etiqueta": "dosis de nitrogeno (insumo)",
+        "z_spec": {
+          "b": -0.020310164097995475,
+          "se": 0.016033926365080203,
+          "t": -1.2666993495884051,
+          "p": 0.205262812675012
+        },
+        "z_res_investigacion_no_IA": {
+          "b": 0.1460125235038477,
+          "se": 0.12987037039377716,
+          "t": 1.1242943487504213,
+          "p": 0.2608881750103649
+        }
+      },
+      "log_nue": {
+        "etiqueta": "eficiencia del nitrogeno (kg grano / kg N)",
+        "z_spec": {
+          "b": 0.04985162321555885,
+          "se": 0.020212386887514724,
+          "t": 2.466389718987242,
+          "p": 0.01364827486472831
+        },
+        "z_res_investigacion_no_IA": {
+          "b": -0.025559136622958258,
+          "se": 0.13230936739022742,
+          "t": -0.19317707526765862,
+          "p": 0.8468202918587054
+        }
+      }
+    },
+    "condicional_a_complementos": {
+      "log_yield": {
+        "etiqueta": "rendimiento (nivel de produccion)",
+        "z_spec": {
+          "b": 0.027489093787552002,
+          "se": 0.018935028678898323,
+          "t": 1.451758761695806,
+          "p": 0.14656869403565534
+        },
+        "interaccion": {
+          "b": -0.004465176189908795,
+          "se": 0.009621514500650952,
+          "t": -0.46408246743344816,
+          "p": 0.6425886625280972
+        },
+        "efectos_marginales": {
+          "p10": {
+            "moderador": -1.145581217196446,
+            "efecto_marginal": 0.03260431576218431,
+            "se": 0.01280567182795227,
+            "t": 2.5460839696840805,
+            "p": 0.010893897982726664
+          },
+          "p50": {
+            "moderador": -0.16448166347096138,
+            "efecto_marginal": 0.02822353339495913,
+            "se": 0.017766910303721444,
+            "t": 1.5885448236347233,
+            "p": 0.11216319367335115
+          },
+          "p90": {
+            "moderador": 1.5093179218301591,
+            "efecto_marginal": 0.02074972333999335,
+            "se": 0.03139757558650607,
+            "t": 0.6608702408510512,
+            "p": 0.508695532180657
+          }
+        }
+      },
+      "log_n_x": {
+        "etiqueta": "dosis de nitrogeno (insumo)",
+        "z_spec": {
+          "b": -0.08505464803423855,
+          "se": 0.019777713133240202,
+          "t": -4.300529968315097,
+          "p": 1.7039012581924083e-05
+        },
+        "interaccion": {
+          "b": -0.0955972115420028,
+          "se": 0.01602491043399369,
+          "t": -5.965537962646715,
+          "p": 2.43829347939865e-09
+        },
+        "efectos_marginales": {
+          "p10": {
+            "moderador": -1.145581217196446,
+            "efecto_marginal": 0.02445972192463515,
+            "se": 0.01564149464116818,
+            "t": 1.5637713969007494,
+            "p": 0.11787126378622204
+          },
+          "p50": {
+            "moderador": -0.16448166347096138,
+            "efecto_marginal": -0.06933065965662455,
+            "se": 0.018129621017130147,
+            "t": -3.8241648620848747,
+            "p": 0.00013121609592192662
+          },
+          "p90": {
+            "moderador": 1.5093179218301591,
+            "efecto_marginal": -0.2293412326915723,
+            "se": 0.04016449367609269,
+            "t": -5.710049142934527,
+            "p": 1.1294355672930578e-08
+          }
+        }
+      },
+      "log_nue": {
+        "etiqueta": "eficiencia del nitrogeno (kg grano / kg N)",
+        "z_spec": {
+          "b": 0.11254374182179053,
+          "se": 0.024012283012040413,
+          "t": 4.686923844990417,
+          "p": 2.773421082534896e-06
+        },
+        "interaccion": {
+          "b": 0.09113203535209399,
+          "se": 0.01819554872809234,
+          "t": 5.008479640484493,
+          "p": 5.48616775488968e-07
+        },
+        "efectos_marginales": {
+          "p10": {
+            "moderador": -1.145581217196446,
+            "efecto_marginal": 0.008144593837549147,
+            "se": 0.019582507835632014,
+            "t": 0.4159116853628612,
+            "p": 0.6774746284446354
+          },
+          "p50": {
+            "moderador": -0.16448166347096138,
+            "efecto_marginal": 0.09755419305158365,
+            "se": 0.0222583782948687,
+            "t": 4.382807757116481,
+            "p": 1.1715949027824024e-05
+          },
+          "p90": {
+            "moderador": 1.5093179218301591,
+            "efecto_marginal": 0.2500909560315656,
+            "se": 0.046450830523377756,
+            "t": 5.38399320773608,
+            "p": 7.28512536962711e-08
+          }
+        }
+      }
+    },
+    "correlacion_especializacion_vs_investigacion_general": 0.14049070210098918,
+    "identidad_contable": "log_nue = log_yield - log_n_x, de modo que el efecto sobre la eficiencia es exactamente la diferencia entre el efecto sobre el producto y el efecto sobre el insumo.",
+    "nota_complementos": "Complementos PREDETERMINADOS: media 2000-2005 de internet, banda ancha, movil, matricula terciaria y electrificacion rural, anteriores a la irrupcion de la IA de 2016.",
+    "lectura": "El valor de la IA no aparece como un salto en el nivel de rendimiento sino en el margen de eficiencia; el ahorro de insumos es la parte que depende de los complementos."
+  },
+  "HA3_test_diferencial_entre_oleadas": {
+    "oleada_fertilizante_1961_1990": {
+      "periodo": [
+        1961,
+        1990
+      ],
+      "resultado": "log_yield",
+      "n_obs": 3441,
+      "n_paises": 136,
+      "tecnologia": "log_n",
+      "complementos": [
+        "irr",
+        "log_mech"
+      ],
+      "efecto_medio_z_tech": {
+        "b": 0.13570252540982303,
+        "se": 0.054406326381750705,
+        "t": 2.4942416522969135,
+        "p": 0.012622657652703234
+      },
+      "interaccion": {
+        "b": 0.06416000993838086,
+        "se": 0.0305650263827145,
+        "t": 2.0991315085095232,
+        "p": 0.03580530958530356
+      },
+      "efecto_marginal_complementos_bajos_-1SD": 0.07154251547144216,
+      "efecto_marginal_complementos_altos_+1SD": 0.1998625353482039,
+      "dependencia_complementos_b3_entre_b1": 0.4727989382999098
+    },
+    "oleada_mecanizacion_1961_2009": {
+      "periodo": [
+        1961,
+        2009
+      ],
+      "resultado": "log_yield",
+      "n_obs": 4686,
+      "n_paises": 158,
+      "tecnologia": "log_mech",
+      "complementos": [
+        "irr",
+        "log_n"
+      ],
+      "efecto_medio_z_tech": {
+        "b": 0.030945098304775362,
+        "se": 0.04957871491939397,
+        "t": 0.6241609601032722,
+        "p": 0.5325218827366855
+      },
+      "interaccion": {
+        "b": 0.013393615277095873,
+        "se": 0.02851628884693784,
+        "t": 0.46968297133566583,
+        "p": 0.6385815357723432
+      },
+      "efecto_marginal_complementos_bajos_-1SD": 0.01755148302767949,
+      "efecto_marginal_complementos_altos_+1SD": 0.044338713581871234,
+      "dependencia_complementos_b3_entre_b1": 0.43281863722594827
+    },
+    "oleada_IA_2000_2023": {
+      "periodo": [
+        2000,
+        2023
+      ],
+      "resultado": "log_yield",
+      "n_obs": 3715,
+      "n_paises": 168,
+      "tecnologia": "log_ai_ag",
+      "complementos": [
+        "internet_users_pct",
+        "broadband_per100",
+        "mobile_subs_per100",
+        "tertiary_enrol_pct",
+        "electricity_rural_pct"
+      ],
+      "efecto_medio_z_tech": {
+        "b": 0.08069486286311632,
+        "se": 0.03466138706361793,
+        "t": 2.328090988251797,
+        "p": 0.019907272727136487
+      },
+      "interaccion": {
+        "b": -0.04249757890395229,
+        "se": 0.020752886322583902,
+        "t": -2.0477912442331054,
+        "p": 0.040580458653256546
+      },
+      "efecto_marginal_complementos_bajos_-1SD": 0.12319244176706862,
+      "efecto_marginal_complementos_altos_+1SD": 0.03819728395916403,
+      "dependencia_complementos_b3_entre_b1": -0.5266454071065397
+    },
+    "placebo_investigacion_no_IA_2000_2023": {
+      "periodo": [
+        2000,
+        2023
+      ],
+      "resultado": "log_yield",
+      "n_obs": 3715,
+      "n_paises": 168,
+      "tecnologia": "log_nonai_res",
+      "complementos": [
+        "internet_users_pct",
+        "broadband_per100",
+        "mobile_subs_per100",
+        "tertiary_enrol_pct",
+        "electricity_rural_pct"
+      ],
+      "efecto_medio_z_tech": {
+        "b": 0.10607864714953899,
+        "se": 0.04842525123203932,
+        "t": 2.1905647250283087,
+        "p": 0.02848330616929055
+      },
+      "interaccion": {
+        "b": 0.03898770447269711,
+        "se": 0.02197377966054099,
+        "t": 1.7742830352808425,
+        "p": 0.07601634525858887
+      },
+      "efecto_marginal_complementos_bajos_-1SD": 0.06709094267684187,
+      "efecto_marginal_complementos_altos_+1SD": 0.1450663516222361,
+      "dependencia_complementos_b3_entre_b1": 0.36753583798760336
+    },
+    "margen_insumos_NUE": {
+      "oleada_fertilizante_1961_1990": {
+        "periodo": [
+          1961,
+          1990
+        ],
+        "resultado": "log_nue",
+        "n_obs": 3182,
+        "n_paises": 131,
+        "tecnologia": "log_n",
+        "complementos": [
+          "irr",
+          "log_mech"
+        ],
+        "efecto_medio_z_tech": {
+          "b": -1.634047972371038,
+          "se": 0.05779387554513646,
+          "t": -28.27372203296632,
+          "p": 7.274145488852237e-176
+        },
+        "interaccion": {
+          "b": 0.16774028736727947,
+          "se": 0.041841443171763526,
+          "t": 4.008950806947264,
+          "p": 6.098911875830342e-05
+        },
+        "efecto_marginal_complementos_bajos_-1SD": -1.8017882597383175,
+        "efecto_marginal_complementos_altos_+1SD": -1.4663076850037584,
+        "dependencia_complementos_b3_entre_b1": -0.1026532208377486
+      },
+      "oleada_IA_2000_2023": {
+        "periodo": [
+          2000,
+          2023
+        ],
+        "resultado": "log_nue",
+        "n_obs": 3671,
+        "n_paises": 170,
+        "tecnologia": "log_ai_ag",
+        "complementos": [
+          "internet_users_pct",
+          "broadband_per100",
+          "mobile_subs_per100",
+          "tertiary_enrol_pct",
+          "electricity_rural_pct"
+        ],
+        "efecto_medio_z_tech": {
+          "b": 0.09458367312624663,
+          "se": 0.04170985470337595,
+          "t": 2.2676576986155537,
+          "p": 0.023350078005768073
+        },
+        "interaccion": {
+          "b": 0.0009128385693445186,
+          "se": 0.02644776006840641,
+          "t": 0.034514778075099235,
+          "p": 0.9724666581697643
+        },
+        "efecto_marginal_complementos_bajos_-1SD": 0.09367083455690212,
+        "efecto_marginal_complementos_altos_+1SD": 0.09549651169559115,
+        "dependencia_complementos_b3_entre_b1": 0.00965112200840516
+      }
+    },
+    "comparacion_dependencia": {
+      "oleada_fertilizante_1961_1990": 0.4727989382999098,
+      "oleada_mecanizacion_1961_2009": 0.43281863722594827,
+      "oleada_IA_2000_2023": -0.5266454071065397,
+      "placebo_investigacion_no_IA_2000_2023": 0.36753583798760336
+    },
+    "lectura": "Si 'el valor esta en los complementos' fuese generico a cualquier tecnologia, el signo y la magnitud de la dependencia serian equivalentes en las cuatro columnas. Las oleadas incorporadas y el placebo muestran dependencia POSITIVA sobre el nivel de rendimiento; la IA la muestra NEGATIVA sobre el nivel y POSITIVA sobre el ahorro de insumos: es un patron especifico, no generico."
+  },
+  "HA4_DiD_y_comparacion_de_eras": {
+    "definicion_exposicion": "especializacion predeterminada: cuota (por mil) de la produccion cientifica nacional dedicada a IA agricola en 2010-2015, previa al corte",
+    "corte": 2016,
+    "DiD": {
+      "log_yield": {
+        "etiqueta": "rendimiento (log)",
+        "n_obs": 3738,
+        "n_paises": 169,
+        "DiD_exposicion_x_post2016": {
+          "b": 0.04636818213616774,
+          "se": 0.02702518549559814,
+          "t": 1.7157396438118875,
+          "p": 0.08620970538632161
+        },
+        "DiD_controlando_investigacion_general": {
+          "IA": {
+            "b": 0.0466763979715939,
+            "se": 0.02698258508588103,
+            "t": 1.7298712418780768,
+            "p": 0.08365328239112536
+          },
+          "investigacion_no_IA": {
+            "b": 0.008748682355791551,
+            "se": 0.017960568625144117,
+            "t": 0.48710497637272615,
+            "p": 0.6261839400276573
+          }
+        },
+        "estudio_de_eventos": {
+          "2006": {
+            "b": -0.027853765539474773,
+            "se": 0.05424692562036977,
+            "p": 0.6076277908878169
+          },
+          "2007": {
+            "b": -0.01313241769327091,
+            "se": 0.06467492407285481,
+            "p": 0.8390938446062314
+          },
+          "2008": {
+            "b": -0.06426628693973327,
+            "se": 0.053956193132173244,
+            "p": 0.23362112981350336
+          },
+          "2009": {
+            "b": 0.0027802156761244368,
+            "se": 0.04762704371783967,
+            "p": 0.9534501453463722
+          },
+          "2010": {
+            "b": 0.03904036985384185,
+            "se": 0.03840574627840406,
+            "p": 0.30937983762787524
+          },
+          "2011": {
+            "b": 0.009769067121789474,
+            "se": 0.030587196777574262,
+            "p": 0.7494351967454544
+          },
+          "2012": {
+            "b": 0.00208852444971077,
+            "se": 0.03032888695000464,
+            "p": 0.9450990296585484
+          },
+          "2013": {
+            "b": 0.020587100450384532,
+            "se": 0.03484085340777115,
+            "p": 0.5545943463505825
+          },
+          "2014": {
+            "b": -0.029185509355221795,
+            "se": 0.034600571642498926,
+            "p": 0.3989500423870219
+          },
+          "2016": {
+            "b": -0.010228519063356305,
+            "se": 0.021469957460528807,
+            "p": 0.6337817600845888
+          },
+          "2017": {
+            "b": 0.037049000022691986,
+            "se": 0.04284853752086799,
+            "p": 0.3872307659397437
+          },
+          "2018": {
+            "b": 0.014372244871115769,
+            "se": 0.03299624982061476,
+            "p": 0.6631472380138701
+          },
+          "2019": {
+            "b": 0.03158169604754668,
+            "se": 0.03384168824373782,
+            "p": 0.3507070654950166
+          },
+          "2020": {
+            "b": 0.05371848928123801,
+            "se": 0.03378344850199891,
+            "p": 0.11181608311971451
+          },
+          "2021": {
+            "b": 0.09497538902286001,
+            "se": 0.0373578208447918,
+            "p": 0.01101205361584599
+          },
+          "2022": {
+            "b": 0.08245995749503995,
+            "se": 0.03788020187802255,
+            "p": 0.029490894042642768
+          },
+          "2023": {
+            "b": 0.06698843468936755,
+            "se": 0.03968569148667132,
+            "p": 0.09141612673518143
+          }
+        },
+        "pre_tendencia_min_p_antes_de_2015": 0.23362112981350336,
+        "pre_tendencia_n_significativos_antes_de_2015": 0
+      },
+      "log_n_x": {
+        "etiqueta": "dosis de N (log)",
+        "n_obs": 3738,
+        "n_paises": 169,
+        "DiD_exposicion_x_post2016": {
+          "b": -0.048467425033673274,
+          "se": 0.03457692334149934,
+          "t": -1.401727520837648,
+          "p": 0.16099662915692514
+        },
+        "DiD_controlando_investigacion_general": {
+          "IA": {
+            "b": -0.05363759191771304,
+            "se": 0.03387754605476887,
+            "t": -1.583278547714131,
+            "p": 0.1133579902200895
+          },
+          "investigacion_no_IA": {
+            "b": -0.14675478221975857,
+            "se": 0.04842016736243771,
+            "t": -3.030860697387937,
+            "p": 0.0024385772594443674
+          }
+        },
+        "estudio_de_eventos": {
+          "2006": {
+            "b": 0.08651151380765096,
+            "se": 0.07873933821216264,
+            "p": 0.2718956015902477
+          },
+          "2007": {
+            "b": 0.14688586248452737,
+            "se": 0.06189718550199227,
+            "p": 0.017641299568957346
+          },
+          "2008": {
+            "b": 0.12570711709799204,
+            "se": 0.08762301187773115,
+            "p": 0.15139088349272883
+          },
+          "2009": {
+            "b": 0.12294198242465719,
+            "se": 0.059847402517323636,
+            "p": 0.03995076458564804
+          },
+          "2010": {
+            "b": 0.1797027162520398,
+            "se": 0.0583878218124996,
+            "p": 0.0020857463197429026
+          },
+          "2011": {
+            "b": 0.1077262467911844,
+            "se": 0.05263337716984782,
+            "p": 0.04068472379238847
+          },
+          "2012": {
+            "b": 0.061001994378445626,
+            "se": 0.05183849174740254,
+            "p": 0.2392872238570709
+          },
+          "2013": {
+            "b": 0.03921718800092923,
+            "se": 0.04455283426125999,
+            "p": 0.3787292943438091
+          },
+          "2014": {
+            "b": 0.06487757534905753,
+            "se": 0.037240396580319274,
+            "p": 0.08148587182073003
+          },
+          "2016": {
+            "b": 0.020868559862583284,
+            "se": 0.04289758279992588,
+            "p": 0.626631115872475
+          },
+          "2017": {
+            "b": 0.016018278469565522,
+            "se": 0.0504251084588398,
+            "p": 0.750739267707123
+          },
+          "2018": {
+            "b": 0.03578712188042976,
+            "se": 0.04668356061652383,
+            "p": 0.44332569049432313
+          },
+          "2019": {
+            "b": 0.004511295221487251,
+            "se": 0.05526976123522174,
+            "p": 0.9349463454969055
+          },
+          "2020": {
+            "b": 0.0022959238068951046,
+            "se": 0.05540210817796079,
+            "p": 0.9669442550325024
+          },
+          "2021": {
+            "b": 0.05448707442181758,
+            "se": 0.05373789906094964,
+            "p": 0.3106107700174312
+          },
+          "2022": {
+            "b": 0.09575412947807069,
+            "se": 0.05953356874422273,
+            "p": 0.10774636084328124
+          },
+          "2023": {
+            "b": 0.08310057288735598,
+            "se": 0.05566094400664707,
+            "p": 0.13544290803431427
+          }
+        },
+        "pre_tendencia_min_p_antes_de_2015": 0.0020857463197429026,
+        "pre_tendencia_n_significativos_antes_de_2015": 4
+      },
+      "log_nue": {
+        "etiqueta": "eficiencia del N (log)",
+        "n_obs": 3738,
+        "n_paises": 169,
+        "DiD_exposicion_x_post2016": {
+          "b": 0.09483560716984098,
+          "se": 0.043056698235280765,
+          "t": 2.2025750012603718,
+          "p": 0.027624717491356414
+        },
+        "DiD_controlando_investigacion_general": {
+          "IA": {
+            "b": 0.10031398988930679,
+            "se": 0.03963554440647769,
+            "t": 2.5309098535533763,
+            "p": 0.011376708348474275
+          },
+          "investigacion_no_IA": {
+            "b": 0.15550346457555003,
+            "se": 0.048269159729826996,
+            "t": 3.2215904616102042,
+            "p": 0.0012748121170477998
+          }
+        },
+        "estudio_de_eventos": {
+          "2006": {
+            "b": -0.11436527934712548,
+            "se": 0.08724335915555811,
+            "p": 0.18989945260119478
+          },
+          "2007": {
+            "b": -0.1600182801777981,
+            "se": 0.09499146115521474,
+            "p": 0.0920745829196692
+          },
+          "2008": {
+            "b": -0.18997340403772545,
+            "se": 0.10497106898029601,
+            "p": 0.07033159129940271
+          },
+          "2009": {
+            "b": -0.12016176674853321,
+            "se": 0.07873717234364011,
+            "p": 0.12698190071956703
+          },
+          "2010": {
+            "b": -0.14066234639819736,
+            "se": 0.07926931403634462,
+            "p": 0.07598267402369557
+          },
+          "2011": {
+            "b": -0.09795717966939498,
+            "se": 0.060645248599643924,
+            "p": 0.10625677417378993
+          },
+          "2012": {
+            "b": -0.058913469928734086,
+            "se": 0.06324572699413379,
+            "p": 0.351594369555999
+          },
+          "2013": {
+            "b": -0.018630087550545543,
+            "se": 0.06207404124656273,
+            "p": 0.7640803860492936
+          },
+          "2014": {
+            "b": -0.09406308470427939,
+            "se": 0.04699029294957999,
+            "p": 0.04531101727622209
+          },
+          "2016": {
+            "b": -0.03109707892594006,
+            "se": 0.04068064983435639,
+            "p": 0.4446173369544497
+          },
+          "2017": {
+            "b": 0.02103072155312509,
+            "se": 0.0679792581849676,
+            "p": 0.7570403294513963
+          },
+          "2018": {
+            "b": -0.021414877009313493,
+            "se": 0.057674342315769046,
+            "p": 0.7104090140959782
+          },
+          "2019": {
+            "b": 0.02707040082605891,
+            "se": 0.06236729590026505,
+            "p": 0.6642535761685604
+          },
+          "2020": {
+            "b": 0.051422565474343984,
+            "se": 0.06708720742621457,
+            "p": 0.44337689267054436
+          },
+          "2021": {
+            "b": 0.040488314601042186,
+            "se": 0.06791310632859637,
+            "p": 0.5510561764217841
+          },
+          "2022": {
+            "b": -0.01329417198303021,
+            "se": 0.07388533649793268,
+            "p": 0.8572076994748421
+          },
+          "2023": {
+            "b": -0.016112138197988582,
+            "se": 0.07336128409380784,
+            "p": 0.8261614552539743
+          }
+        },
+        "pre_tendencia_min_p_antes_de_2015": 0.04531101727622209,
+        "pre_tendencia_n_significativos_antes_de_2015": 1
+      }
+    },
+    "crecimiento_anual_pct_por_era": {
+      "rendimiento_cereal_mundial": {
+        "revolucion_verde_1961_1990": 2.3320133860067376,
+        "post_revolucion_verde_1991_2015": 1.4864723605288879,
+        "era_IA_2016_2023": 0.7361684057967322
+      },
+      "eficiencia_del_nitrogeno_mediana": {
+        "revolucion_verde_1961_1990": -2.4515706968423077,
+        "post_revolucion_verde_1991_2015": 0.8190622024677555,
+        "era_IA_2016_2023": 2.2324502191556594
+      },
+      "dosis_de_nitrogeno_mediana": {
+        "revolucion_verde_1961_1990": 7.580337468961186,
+        "post_revolucion_verde_1991_2015": 1.5564922074274468,
+        "era_IA_2016_2023": -1.5174009271707782
+      }
+    },
+    "veredicto_pretendencias": "FALLA. El estudio de eventos normalizado a 2015 muestra coeficientes previos significativos (4 de 9 en la dosis de N) y ausencia de salto posterior a 2016. El DiD NO admite lectura causal: se reporta como asociacion descriptiva. La evidencia especifica de la IA descansa en la estructura de complementariedad de HA2, no en este corte temporal.",
+    "lectura": "Comparacion en paralelo: la Revolucion Verde compro rendimiento a costa de la eficiencia de insumos; la era de la IA muestra la imagen especular -sin aceleracion del rendimiento pero con la mayor mejora de eficiencia del periodo-. La comparacion de eras es descriptiva."
+  },
+  "HA5_no_transferibilidad_de_la_funcion_aprendida": {
+    "matriz_R2_entrenar_en_fila_evaluar_en_columna": {
+      "Middle East, North Africa, Afghanistan & Pakistan": {
+        "Middle East, North Africa, Afghanistan & Pakistan": 0.6846477845999158,
+        "Sub-Saharan Africa ": -0.7420932594554954,
+        "Europe & Central Asia": -3.2397576654835305,
+        "Latin America & Caribbean ": -1.780702249958313,
+        "East Asia & Pacific": -1.716619376789216
+      },
+      "Sub-Saharan Africa ": {
+        "Middle East, North Africa, Afghanistan & Pakistan": -0.028766128117236667,
+        "Sub-Saharan Africa ": 0.3756279862156704,
+        "Europe & Central Asia": -1.9179243783210698,
+        "Latin America & Caribbean ": -2.1042157415466853,
+        "East Asia & Pacific": -0.40232899209404027
+      },
+      "Europe & Central Asia": {
+        "Middle East, North Africa, Afghanistan & Pakistan": -0.19822729458114074,
+        "Sub-Saharan Africa ": -0.2880126839253818,
+        "Europe & Central Asia": 0.5236054285052834,
+        "Latin America & Caribbean ": -0.7551835823604613,
+        "East Asia & Pacific": -0.14381495611518513
+      },
+      "Latin America & Caribbean ": {
+        "Middle East, North Africa, Afghanistan & Pakistan": 0.26907266823903175,
+        "Sub-Saharan Africa ": -0.22142807001578424,
+        "Europe & Central Asia": -0.25748399683889,
+        "Latin America & Caribbean ": 0.5882098978639797,
+        "East Asia & Pacific": 0.36599329558058635
+      },
+      "East Asia & Pacific": {
+        "Middle East, North Africa, Afghanistan & Pakistan": 0.11828913091330673,
+        "Sub-Saharan Africa ": -0.14700767061434838,
+        "Europe & Central Asia": -0.029773886819075335,
+        "Latin America & Caribbean ": 0.013359088566838206,
+        "East Asia & Pacific": 0.40389777318597
+      }
+    },
+    "R2_medio_misma_region_holdout_temporal": 0.5151977740741639,
+    "R2_medio_otra_region": -0.6603312874868046,
+    "caida_absoluta_R2": 1.1755290615609684,
+    "n_regiones": 5,
+    "elasticidad_del_nitrogeno_por_region": {
+      "Middle East, North Africa, Afghanistan & Pakistan": 0.36770699438029353,
+      "Sub-Saharan Africa ": -0.13274007991503314,
+      "Europe & Central Asia": 0.2938399723785525,
+      "Latin America & Caribbean ": 0.14152789654058426,
+      "East Asia & Pacific": 0.005841106994506615
+    },
+    "rango_elasticidad_N": [
+      -0.13274007991503314,
+      0.36770699438029353
+    ],
+    "lectura": "Un artefacto incorporado conserva su productividad al cruzar una frontera; una funcion aprendida no, porque su rendimiento depende del entorno de datos que la genero. La heterogeneidad de la funcion de respuesta a insumos entre regiones es la causa mecanica de esa no transferibilidad."
+  },
+  "ROB_robustez": {
+    "base_NUE_especializacion_corte2016": {
+      "n_obs": 3794,
+      "b": 0.09851458922008717,
+      "se": 0.04326547892857442,
+      "t": 2.2769790525772686,
+      "p": 0.022787476545211953
+    },
+    "exposicion_por_volumen": {
+      "n_obs": 3738,
+      "b": 0.11428367231025921,
+      "se": 0.0315501455102037,
+      "t": 3.6222866951056845,
+      "p": 0.00029201022563996634
+    },
+    "exposicion_alternativa_agricultura_de_precision": {
+      "n_obs": 3738,
+      "b": 0.06572005179635955,
+      "se": 0.025500710176153466,
+      "t": 2.577185158467331,
+      "p": 0.009960857775531361
+    },
+    "placebo_exposicion_investigacion_no_IA": {
+      "n_obs": 3738,
+      "b": 0.15177292844682574,
+      "se": 0.04727482684828496,
+      "t": 3.2104385899476173,
+      "p": 0.0013253258363703775
+    },
+    "corte_2015": {
+      "n_obs": 3794,
+      "b": 0.1028876213027447,
+      "se": 0.0442499536740321,
+      "t": 2.3251464184723853,
+      "p": 0.02006413229715549
+    },
+    "corte_2017": {
+      "n_obs": 3794,
+      "b": 0.09811667910071217,
+      "se": 0.04305757428739263,
+      "t": 2.278732156294299,
+      "p": 0.02268299200133018
+    },
+    "sin_CHN_IND_USA": {
+      "n_obs": 3722,
+      "b": 0.09916350354008678,
+      "se": 0.04377040533919713,
+      "t": 2.265537702281322,
+      "p": 0.023479703112877424
+    },
+    "controlando_renta_pc": {
+      "n_obs": 3727,
+      "b": 0.10014565550234815,
+      "se": 0.04211629480416273,
+      "t": 2.377836321262759,
+      "p": 0.017414554048508942
+    },
+    "controlando_tendencias_por_region": {
+      "n_obs": 3794,
+      "b": 0.12371192407685666,
+      "se": 0.042832091829509505,
+      "t": 2.888299842307126,
+      "p": 0.0038733045381301296
+    },
+    "lectura": "El efecto sobre la eficiencia del nitrogeno sobrevive a los anios de corte, a la exclusion de los tres mayores productores, al control de renta y a tendencias por region. La exposicion placebo (investigacion no-IA) tiene tambien efecto propio: la atribucion especifica a la IA descansa en la carrera de caballos de HA2, no en este bloque."
+  }
+}

@@ -1,0 +1,65 @@
+# Replication package: agri-ai-input-margin
+#
+# Install with:   pip install -r requirements.txt
+#
+# Floors are set at the minor version that was actually used, with an upper bound at the
+# next major version. The exact environment the shipped results were produced in is
+# recorded in the "tested with" block at the bottom; pin to those versions if you need
+# bit-for-bit reproduction of the figures.
+#
+# Python 3.10+ required (3.13.2 used).
+
+# --- core numerics and data handling -----------------------------------------
+pandas>=2.2,<3
+numpy>=2.2,<3
+
+# --- estimation --------------------------------------------------------------
+# statsmodels provides the two-way fixed-effects OLS with cluster-robust standard errors
+# used throughout the AI block (12_ai_observable.py). `linearmodels` is deliberately NOT a
+# dependency: the panel regressions use explicit C(iso3) + C(year) dummies, not a
+# dedicated panel library.
+statsmodels>=0.14,<1
+scipy>=1.16,<2
+
+# --- machine learning --------------------------------------------------------
+# LinearRegression, RandomForestRegressor, HistGradientBoostingRegressor, GroupKFold,
+# permutation_importance, and the imputation/scaling pipelines.
+scikit-learn>=1.7,<2
+
+# --- plotting ----------------------------------------------------------------
+matplotlib>=3.10,<4
+
+# --- data acquisition --------------------------------------------------------
+# requests: World Bank v2 API, OpenAlex works API, FAOSTAT bulk ZIPs.
+# pycountry: the M49 -> ISO3 and ISO2 -> ISO3 mappings that make the three sources joinable.
+requests>=2.32,<3
+pycountry>=26.2
+
+# --- manuscript assembly (optional) ------------------------------------------
+# Needed only by code/09_build_docx.py, code/09b_build_docx_en.py and
+# code/13_build_docx_v2.py, which rebuild the manuscript DOCX. Those scripts read a
+# markdown source in article/ that is NOT shipped in this repository, so they will not run
+# on a fresh clone. Omit this line if you only want to reproduce the analysis.
+python-docx>=1.2,<2
+
+# -----------------------------------------------------------------------------
+# Tested with (Windows 11, Python 3.13.2):
+#   pandas          2.2.3
+#   numpy           2.2.6
+#   scipy           1.16.0
+#   statsmodels     0.14.5
+#   scikit-learn    1.7.1
+#   matplotlib      3.10.3
+#   requests        2.32.3
+#   pycountry       26.2.16
+#   python-docx     1.2.0
+#
+# Note on scikit-learn: tree-based estimators are seeded (random_state=42 in
+# 06_yield_models.py and 10_revision_analyses.py, random_state=0 in the HA5 transfer
+# block of 12_ai_observable.py), so results are deterministic within a given
+# scikit-learn version. Across major versions, changes to the internals of
+# HistGradientBoostingRegressor can shift the fourth decimal of R2.
+#
+# Note on pycountry: the ISO 3166 tables it ships are versioned by release date. A much
+# older or newer pycountry could in principle resolve a marginal M49 code differently;
+# see docs/LINKAGE.md for the country-count checks that will catch this.

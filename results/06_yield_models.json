@@ -1,0 +1,151 @@
+{
+  "muestra": {
+    "n": 8364,
+    "paises": 172,
+    "anio_min": 1961,
+    "anio_max": 2023,
+    "features": [
+      "n_kg_ha",
+      "p_kg_ha",
+      "k_kg_ha",
+      "irrig_share_cropland",
+      "temp_anom",
+      "log_arable",
+      "year"
+    ],
+    "target": "log(cereal_yield_kg_ha)"
+  },
+  "testA_ML_vs_OLS": {
+    "holdout_temporal": {
+      "OLS (lineal)": {
+        "rmse_log": 0.6711,
+        "r2": 0.3392,
+        "rmse_kg_ha": 3312.3,
+        "mae_kg_ha": 1706.7
+      },
+      "Random Forest": {
+        "rmse_log": 0.4913,
+        "r2": 0.6458,
+        "rmse_kg_ha": 2680.7,
+        "mae_kg_ha": 1150.8
+      },
+      "Gradient Boosting": {
+        "rmse_log": 0.4713,
+        "r2": 0.6741,
+        "rmse_kg_ha": 2590.8,
+        "mae_kg_ha": 1127.6
+      }
+    },
+    "groupkfold_pais": {
+      "OLS (lineal)": {
+        "r2_medio": 0.4488,
+        "r2_sd": 0.0335,
+        "rmse_kg_ha_medio": 2095.4
+      },
+      "Random Forest": {
+        "r2_medio": 0.4011,
+        "r2_sd": 0.061,
+        "rmse_kg_ha_medio": 2015.1
+      },
+      "Gradient Boosting": {
+        "r2_medio": 0.4157,
+        "r2_sd": 0.097,
+        "rmse_kg_ha_medio": 2021.3
+      }
+    }
+  },
+  "testB_importancia": {
+    "permutation_importance_test": [
+      {
+        "feature": "n_kg_ha",
+        "importancia": 0.4471,
+        "sd": 0.018
+      },
+      {
+        "feature": "irrig_share_cropland",
+        "importancia": 0.2641,
+        "sd": 0.0141
+      },
+      {
+        "feature": "log_arable",
+        "importancia": 0.2534,
+        "sd": 0.0111
+      },
+      {
+        "feature": "k_kg_ha",
+        "importancia": 0.0975,
+        "sd": 0.0069
+      },
+      {
+        "feature": "p_kg_ha",
+        "importancia": 0.0524,
+        "sd": 0.0049
+      },
+      {
+        "feature": "temp_anom",
+        "importancia": 0.0089,
+        "sd": 0.0023
+      },
+      {
+        "feature": "year",
+        "importancia": 0.0,
+        "sd": 0.0
+      }
+    ]
+  },
+  "testB_r2_univariante": {
+    "r2_cada_feature_sola": {
+      "n_kg_ha": 0.3405,
+      "p_kg_ha": 0.1398,
+      "k_kg_ha": 0.2042,
+      "irrig_share_cropland": 0.0266,
+      "temp_anom": -0.0159,
+      "log_arable": -0.0791,
+      "year": -0.0079
+    },
+    "r2_paquete_completo": 0.6741,
+    "interpretacion": "Ningun factor unico alcanza el R2 del paquete completo -> la productividad es un paquete."
+  },
+  "testC_generico_vs_especifico": {
+    "1_generico_global": {
+      "rmse_log": 0.4713,
+      "r2": 0.6741,
+      "rmse_kg_ha": 2590.8,
+      "mae_kg_ha": 1127.6
+    },
+    "2_regional": {
+      "rmse_log": 0.4085,
+      "r2": 0.7551,
+      "rmse_kg_ha": 1901.5,
+      "mae_kg_ha": 891.0,
+      "cobertura_test": 1.0
+    },
+    "3_local_calibrado": {
+      "rmse_log": 0.4477,
+      "r2": 0.7058,
+      "rmse_kg_ha": 2527.1,
+      "mae_kg_ha": 1078.9
+    },
+    "4_inputs_mas_geografia": {
+      "rmse_log": 0.3777,
+      "r2": 0.7906,
+      "rmse_kg_ha": 1832.1,
+      "mae_kg_ha": 770.0
+    },
+    "reduccion_error": {
+      "rmse_generico_kg_ha": 2590.8,
+      "rmse_local_calibrado_kg_ha": 2527.1,
+      "reduccion_local_vs_generico_%": 2.5,
+      "rmse_inputs+geografia_kg_ha": 1832.1,
+      "reduccion_geo_vs_generico_%": 29.3,
+      "interpretacion": "Una calibracion local trivial (offset por pais) y/o anadir geografia reduce el error frente al modelo generico -> apoya la tesis de modelos especificos por area/region frente a una IA generica/integral."
+    }
+  },
+  "descomposicion_varianza": {
+    "r2_solo_inputs_genericos": 0.4751,
+    "r2_inputs_mas_efectos_pais": 0.8658,
+    "r2_solo_efectos_pais": 0.7442,
+    "ganancia_por_especificidad_local": 0.3907,
+    "interpretacion": "La especificidad local (efectos fijos de pais) explica una fraccion sustancial de la varianza del rendimiento que un modelo generico de insumos NO captura."
+  }
+}

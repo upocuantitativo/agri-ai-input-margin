@@ -1,0 +1,83 @@
+{
+  "C2_transferencia_espacial_generico_vs_especifico": {
+    "resultados": {
+      "a_generico_inputs": {
+        "r2_medio": 0.4199,
+        "r2_sd": 0.0968,
+        "rmse_kg_ha_medio": 2015.6
+      },
+      "b_inputs_region_income": {
+        "r2_medio": 0.4637,
+        "r2_sd": 0.149,
+        "rmse_kg_ha_medio": 1843.6
+      },
+      "c_inputs_pais": {
+        "r2_medio": 0.5006,
+        "r2_sd": 0.0399,
+        "rmse_kg_ha_medio": 1830.9
+      }
+    },
+    "interpretacion": "Bajo transferencia a paises NO observados, los efectos fijos de pais (c) son inservibles (pais nuevo -> intercepto global) y NO mejoran sobre el generico; solo region/renta (b), que SI son transferibles, aportan. La ventaja de 'lo especifico' del holdout temporal se debe en gran parte a recordar la media de paises ya vistos, y no transfiere espacialmente."
+  },
+  "I1_complementariedad": {
+    "r2_aditivo": 0.4583,
+    "r2_con_interacciones": 0.5415,
+    "ganancia_r2_por_interacciones": 0.0832,
+    "coef_interacciones_(coef,p)": {
+      "n_kg_ha_z:p_kg_ha_z": [
+        -0.0483,
+        0.0
+      ],
+      "n_kg_ha_z:k_kg_ha_z": [
+        -0.1221,
+        0.0
+      ],
+      "n_kg_ha_z:irrig_share_cropland_z": [
+        -0.1243,
+        0.0
+      ],
+      "p_kg_ha_z:k_kg_ha_z": [
+        0.0002,
+        0.9683
+      ],
+      "p_kg_ha_z:irrig_share_cropland_z": [
+        0.0138,
+        0.0768
+      ],
+      "k_kg_ha_z:irrig_share_cropland_z": [
+        0.0689,
+        0.0
+      ]
+    },
+    "interpretacion": "Si las interacciones entre insumos son significativas y mejoran el ajuste, hay COMPLEMENTARIEDAD (el efecto conjunto supera la suma de efectos aislados): evidencia mas exigente de 'paquete' que la simple superioridad multivariante."
+  },
+  "H6_panel_balanceado": {
+    "n_paises_balanceado": 142,
+    "sd_log_ini": 0.583,
+    "sd_log_fin": 0.884,
+    "tendencia": "divergencia"
+  },
+  "I3_beta_convergencia": {
+    "incondicional": {
+      "n": 142,
+      "beta": 0.00206,
+      "p": 0.2481,
+      "r2": 0.01
+    },
+    "condicional": {
+      "n": 136,
+      "beta": -0.00721,
+      "p": 0.0068,
+      "r2": 0.209
+    },
+    "interpretacion": "beta<0 y significativo = convergencia (catch-up). La condicional controla determinantes del estado estacionario (region, insumos); si sigue sin haber convergencia, la divergencia es robusta."
+  },
+  "H5_empleo_vs_mecanizacion_exogena": {
+    "n": 1932,
+    "coef_log_tractores": -0.0393,
+    "se": 0.0266,
+    "p": 0.13883,
+    "corr_seccion_cruzada_tractores_empleo": -0.379,
+    "interpretacion": "La mecanizacion (tractores/1000 ha) NO comparte el conteo de ocupados agricolas con el empleo agricola (%), por lo que evita la relacion mecanica del VA/trabajador. Un coeficiente negativo y significativo confirma la recomposicion del empleo sin el sesgo definicional."
+  }
+}

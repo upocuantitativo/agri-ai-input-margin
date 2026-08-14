@@ -1,0 +1,20 @@
+{
+  "empleo_agricola_mundial": {
+    "anio_ini": 1991,
+    "valor_ini_%": 42.8,
+    "anio_fin": 2024,
+    "valor_fin_%": 27.3
+  },
+  "regresion_FE_empleo_vs_productividad": {
+    "n": 5417,
+    "coef_log_va": -0.3273,
+    "se": 0.0335,
+    "p_value": 0.0,
+    "interpretacion": "elasticidad negativa: al subir el valor anadido por trabajador agricola, el empleo agricola (% del total) cae -> recomposicion ocupacional",
+    "lectura": "una subida del 10% en VA por trabajador se asocia con un cambio de -3.27% en el empleo agricola (%)"
+  },
+  "correlacion_mecanizacion_empleo": {
+    "n": 1932,
+    "corr_tractores_vs_empleo_agri": -0.379
+  }
+}

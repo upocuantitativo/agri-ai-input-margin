@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------------------
+# Raw data: NOT tracked.
+# ~715 MB, dominated by faostat_QCL.csv (545 MB), which exceeds GitHub's file-size
+# limits and the 50 MB per-file ceiling applied to this repository.
+# Regenerate with:
+#   python code/01_download_worldbank.py
+#   python code/02_download_faostat.py
+#   python code/11_download_ai_indicators.py
+# ---------------------------------------------------------------------------
+data/raw/
+
+# ---------------------------------------------------------------------------
+# Explicitly TRACKED despite the rules below - the point of this repository.
+# (Listed for readers; no negation needed since nothing above matches them.)
+#   data/processed/*.csv
+#   results/*.json
+#   figures/*.png
+# ---------------------------------------------------------------------------
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- virtual environments --------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# --- notebooks -------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- tooling / caches ------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- editors and IDEs ------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS artefacts ----------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- OneDrive / sync artefacts ---------------------------------------------
+# This package was developed inside a OneDrive-synced folder.
+*.tmp
+~$*
+
+# --- manuscript build artefacts --------------------------------------------
+# The DOCX-assembly scripts write into ../article/, which is outside this repository,
+# but guard against a stray local build.
+article/
+*.docx
+
+# --- credentials -----------------------------------------------------------
+.env
+*.key
+secrets.*
