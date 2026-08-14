@@ -2,11 +2,14 @@
 
 Replication materials for:
 
-> **"Not more yield, but fewer inputs: an observable measure of agricultural artificial
-> intelligence and the margin on which its value appears (1961–2024)"**
-> `<TO CONFIRM: author name>` · `<TO CONFIRM: ORCID>` · `<TO CONFIRM: institutional affiliation>`
+> **"Fewer inputs, not more yield: agricultural AI and its digital complements"**
+> Manuel Chaves-Maza (ORCID [0000-0003-2420-8378](https://orcid.org/0000-0003-2420-8378)) and Manuel Chaves Ballester
+> Universidad Pablo de Olavide, Seville, Spain
 > Submitted to *Economics of Innovation and New Technology* (Taylor & Francis).
 > `<TO CONFIRM: article DOI>` · `<TO CONFIRM: repository DOI / Zenodo archive>`
+
+**📊 [Browse every figure in the paper →](https://upocuantitativo.github.io/agri-ai-input-margin/)** — the five kept in the main text and the eleven
+moved to the supplement, with the caption and the script behind each one.
 
 ---
 

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fifteen Figures, Five Kept</title>
+<meta name="description" content="Every figure from the agricultural-AI input-margin paper, and the replication package behind them.">
+<style>
+  :root {
+    --ground:#f4f6f8; --surface:#ffffff; --sunk:#eaeef2;
+    --ink:#111820; --ink-2:#3d4a57; --muted:#6d7a87;
+    --line:#d8dee5; --line-soft:#e6eaef;
+    --accent:#1f4e79; --accent-soft:#e3ecf4;
+    --warm:#b0403c; --warm-soft:#f6e5e4;
+    --shadow:0 1px 2px rgba(17,24,32,.06), 0 8px 24px rgba(17,24,32,.05);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#0d1319; --surface:#151d25; --sunk:#1b242d;
+      --ink:#e8edf2; --ink-2:#b7c2cd; --muted:#8593a0;
+      --line:#2a3540; --line-soft:#212b34;
+      --accent:#7db2e0; --accent-soft:#1a2c3d;
+      --warm:#e08a86; --warm-soft:#33211f;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0d1319; --surface:#151d25; --sunk:#1b242d;
+    --ink:#e8edf2; --ink-2:#b7c2cd; --muted:#8593a0;
+    --line:#2a3540; --line-soft:#212b34;
+    --accent:#7db2e0; --accent-soft:#1a2c3d;
+    --warm:#e08a86; --warm-soft:#33211f;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  a { color:var(--accent); }
+  .wrap { max-width:1120px; margin:0 auto; padding:clamp(28px,5vw,60px) clamp(18px,4vw,40px) 96px; }
+
+  header { border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:40px; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; }
+  h1 { font-family:var(--serif); font-weight:600; font-size:clamp(30px,4.4vw,44px);
+    line-height:1.12; margin:0 0 14px; text-wrap:balance; letter-spacing:-.01em; }
+  .standfirst { margin:0; max-width:66ch; color:var(--ink-2); font-size:17px; }
+
+  .tally { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+  .stat { background:var(--surface); border:1px solid var(--line-soft); border-radius:10px;
+    padding:12px 16px; min-width:132px; box-shadow:var(--shadow); }
+  .stat b { display:block; font-family:var(--serif); font-size:26px; font-weight:600;
+    line-height:1.1; font-variant-numeric:tabular-nums; }
+  .stat span { font-size:12.5px; color:var(--muted); }
+  .stat.is-main b { color:var(--accent); }
+  .stat.is-supp b { color:var(--warm); }
+
+  .repo { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+  .repo a { display:inline-block; padding:7px 13px; border-radius:8px; font-size:13.5px;
+    text-decoration:none; border:1px solid var(--line); background:var(--surface); color:var(--ink); }
+  .repo a:hover { border-color:var(--accent); color:var(--accent); }
+  .repo a code { font-family:var(--mono); font-size:12.5px; color:var(--muted); }
+
+  h2 { font-family:var(--serif); font-weight:600; font-size:23px; letter-spacing:-.005em; margin:0 0 6px; }
+  .section-note { margin:0 0 22px; color:var(--muted); font-size:14.5px; max-width:72ch; }
+  section + section { margin-top:56px; }
+
+  .grid { display:grid; gap:20px; }
+  .grid-main { grid-template-columns:1fr; }
+  .grid-supp { grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); }
+
+  .card { background:var(--surface); border:1px solid var(--line-soft); border-radius:12px;
+    padding:18px 18px 20px; margin:0; box-shadow:var(--shadow);
+    display:flex; flex-direction:column; gap:14px; }
+  .card-head h3 { font-family:var(--serif); font-weight:600; font-size:19px; margin:2px 0 8px; letter-spacing:-.005em; }
+  .card-s .card-head h3 { font-size:16.5px; }
+  .fignum { font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0; font-size:12.5px; }
+  .chip { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px; font-weight:600; letter-spacing:.02em; }
+  .chip-main { background:var(--accent-soft); color:var(--accent); }
+  .chip-supp { background:var(--warm-soft); color:var(--warm); }
+  .cite { color:var(--ink-2); font-variant-numeric:tabular-nums; }
+  .prov { color:var(--muted); font-family:var(--mono); font-size:11.5px; }
+
+  .shot { display:block; width:100%; padding:10px; border:1px solid var(--line-soft);
+    border-radius:8px; background:var(--sunk); cursor:zoom-in; transition:border-color .15s ease; }
+  .shot:hover, .shot:focus-visible { border-color:var(--accent); }
+  .shot:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .shot img { display:block; width:100%; height:auto; border-radius:4px; background:#fff; }
+
+  figcaption { font-size:14px; color:var(--ink-2); max-width:78ch; margin:0; }
+
+  dialog { border:none; padding:0; background:transparent; max-width:min(1400px,96vw); max-height:94vh; }
+  dialog::backdrop { background:rgba(8,12,16,.82); }
+  .lb { background:var(--surface); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .lb img { max-width:100%; max-height:80vh; height:auto; border-radius:6px; background:#fff; }
+  .lb-bar { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .lb-bar strong { font-family:var(--serif); font-weight:600; font-size:15px; }
+  .lb-bar button { border:1px solid var(--line); background:var(--sunk); color:var(--ink);
+    border-radius:7px; padding:5px 13px; font:inherit; font-size:13px; cursor:pointer; }
+  .lb-bar button:hover { border-color:var(--accent); }
+
+  footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); font-size:13.5px; color:var(--muted); }
+  footer code { font-family:var(--mono); font-size:12.5px; color:var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Replication package &middot; agricultural AI and the input margin</p>
+    <h1>Fifteen figures, five kept</h1>
+    <p class="standfirst">Every figure from <em>Fewer inputs, not more yield: agricultural AI and its digital complements</em>, in the order a reader meets it. The five that stay in the main text carry the AI argument; the eleven that move to the supplement carry the historical benchmark. Two of the five are not what they were: Figure&nbsp;4 gained a third series to absorb a table cut for length, and Figure&nbsp;5 did not exist before.</p>
+    <div class="tally">
+      <div class="stat is-main"><b>5</b><span>in the main text</span></div>
+      <div class="stat is-supp"><b>11</b><span>in the supplement</span></div>
+      <div class="stat"><b>300</b><span>dpi, 179.9&nbsp;mm wide</span></div>
+      <div class="stat"><b>3,659</b><span>country-years, 169 countries</span></div>
+    </div>
+    <nav class="repo">
+      <a href="README.md">Read me first</a>
+      <a href="code/">Analysis code <code>01&ndash;16</code></a>
+      <a href="data/processed/">Processed panels</a>
+      <a href="results/">Estimation output <code>*.json</code></a>
+      <a href="docs/DATA_DICTIONARY.md">Data dictionary</a>
+      <a href="docs/LINKAGE.md">How the sources are merged</a>
+      <a href="docs/OPENALEX_QUERIES.md">OpenAlex queries</a>
+      <a href="docs/SUPPLEMENTARY_TABLES.md">Supplementary tables S1&ndash;S12</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Main text</h2>
+    <p class="section-note">Reproduced at the resolution submitted. Captions are the ones printed in the manuscript; the script that draws each one is named beside it.</p>
+    <div class="grid grid-main">
+      <figure class="card">
+        <div class="card-head">
+          <span class="fignum">Figure 1</span>
+          <h3>The emergence of agricultural AI</h3>
+          <p class="meta"><span class="chip chip-main">Main text</span><span class="cite">cited in §4.7</span><code class="prov">12_ai_observable.py</code></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure 1 &mdash; The emergence of agricultural AI">
+          <img src="figures/published/Figure1.png" alt="The emergence of agricultural AI" loading="lazy">
+        </button>
+        <figcaption>World publications combining AI and agricultural terms (log scale) and their share of world research output per 1,000 works, 2000–2024. The dashed line marks 2016.</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card-head">
+          <span class="fignum">Figure 2</span>
+          <h3>Where the value of AI appears</h3>
+          <p class="meta"><span class="chip chip-main">Main text</span><span class="cite">cited in §4.9</span><code class="prov">12_ai_observable.py</code></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure 2 &mdash; Where the value of AI appears">
+          <img src="figures/published/Figure2.png" alt="Where the value of AI appears" loading="lazy">
+        </button>
+        <figcaption>Left: effect of one standard deviation of AI specialisation on yield, nitrogen dose and nitrogen use efficiency. Right: marginal effect on the nitrogen dose at low, median and high predetermined complements.</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card-head">
+          <span class="fignum">Figure 3</span>
+          <h3>Is complement dependence generic?</h3>
+          <p class="meta"><span class="chip chip-main">Main text</span><span class="cite">cited in §4.10</span><code class="prov">12_ai_observable.py</code></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure 3 &mdash; Is complement dependence generic?">
+          <img src="figures/published/Figure3.png" alt="Is complement dependence generic?" loading="lazy">
+        </button>
+        <figcaption>One common specification applied to four technological waves. The embodied waves and the placebo depend on complements positively, on the output margin; AI is the only negative one.</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card-head">
+          <span class="fignum">Figure 4</span>
+          <h3>Gains by technological era</h3>
+          <p class="meta"><span class="chip chip-main">Main text</span><span class="cite">cited in §4.11</span><code class="prov">14_build_eint_figures.py</code></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure 4 &mdash; Gains by technological era">
+          <img src="figures/published/Figure4.png" alt="Gains by technological era" loading="lazy">
+        </button>
+        <figcaption>Annual growth of world cereal yield, median nitrogen dose and nitrogen use efficiency across three eras. The nitrogen-dose series replaces a table cut for length.</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card-head">
+          <span class="fignum">Figure 5</span>
+          <h3>A learned function does not travel</h3>
+          <p class="meta"><span class="chip chip-main">Main text</span><span class="cite">cited in §4.12</span><code class="prov">14_build_eint_figures.py</code></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure 5 &mdash; A learned function does not travel">
+          <img src="figures/published/Figure5.png" alt="A learned function does not travel" loading="lazy">
+        </button>
+        <figcaption>Out-of-sample R² when a yield model trained on the row region is evaluated on the column region, with the region-specific nitrogen elasticities that cause the failure.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Supplementary</h2>
+    <p class="section-note">These are the figures numbered 1&ndash;10 in the previous version, plus the event study. They are still cited by number in the text, now as Figure&nbsp;S1&ndash;S11. Click any figure to enlarge it.</p>
+    <div class="grid grid-supp">
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S1</span>
+          <h3>World production by crop group</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.2</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S1 &mdash; World production by crop group">
+          <img src="figures/published/supplementary/FigureS1.png" alt="World production by crop group" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S2</span>
+          <h3>World cereal yield and its growth rate</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.2</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S2 &mdash; World cereal yield and its growth rate">
+          <img src="figures/published/supplementary/FigureS2.png" alt="World cereal yield and its growth rate" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S3</span>
+          <h3>Spain: hectares of arable land per tractor</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.2</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S3 &mdash; Spain: hectares of arable land per tractor">
+          <img src="figures/published/supplementary/FigureS3.png" alt="Spain: hectares of arable land per tractor" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S4</span>
+          <h3>Cereal yield versus nitrogen applied</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.2</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S4 &mdash; Cereal yield versus nitrogen applied">
+          <img src="figures/published/supplementary/FigureS4.png" alt="Cereal yield versus nitrogen applied" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S5</span>
+          <h3>σ-convergence and β-convergence</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.6</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S5 &mdash; σ-convergence and β-convergence">
+          <img src="figures/published/supplementary/FigureS5.png" alt="σ-convergence and β-convergence" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S6</span>
+          <h3>Median cereal yield by income group</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.6</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S6 &mdash; Median cereal yield by income group">
+          <img src="figures/published/supplementary/FigureS6.png" alt="Median cereal yield by income group" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S7</span>
+          <h3>Permutation importance of the predictors</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.1</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S7 &mdash; Permutation importance of the predictors">
+          <img src="figures/published/supplementary/FigureS7.png" alt="Permutation importance of the predictors" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S8</span>
+          <h3>Generic versus specific prediction error</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.4</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S8 &mdash; Generic versus specific prediction error">
+          <img src="figures/published/supplementary/FigureS8.png" alt="Generic versus specific prediction error" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S9</span>
+          <h3>World agricultural employment</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.5</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S9 &mdash; World agricultural employment">
+          <img src="figures/published/supplementary/FigureS9.png" alt="World agricultural employment" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S10</span>
+          <h3>Partial dependence on nitrogen and irrigation</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.2</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S10 &mdash; Partial dependence on nitrogen and irrigation">
+          <img src="figures/published/supplementary/FigureS10.png" alt="Partial dependence on nitrogen and irrigation" loading="lazy">
+        </button>
+      </figure>
+      <figure class="card card-s">
+        <div class="card-head">
+          <span class="fignum">Figure S11</span>
+          <h3>Event study, base year 2015</h3>
+          <p class="meta"><span class="chip chip-supp">Supplementary</span><span class="cite">cited in §4.11</span></p>
+        </div>
+        <button class="shot" type="button" data-title="Figure S11 &mdash; Event study, base year 2015">
+          <img src="figures/published/supplementary/FigureS11.png" alt="Event study, base year 2015" loading="lazy">
+        </button>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    Everything here regenerates from the deposited data: <code>python code/14_build_eint_figures.py</code> redraws the five main figures from <code>results/12_ai_observable.json</code>. Figures S1&ndash;S10 were produced at 130&nbsp;dpi and S11 at 200&nbsp;dpi; they are published at source resolution rather than upscaled. Code is MIT licensed, derived data CC&nbsp;BY&nbsp;4.0.
+  </footer>
+</div>
+
+<dialog id="lb">
+  <div class="lb">
+    <div class="lb-bar"><strong id="lb-title"></strong><button type="button" id="lb-close">Close</button></div>
+    <img id="lb-img" alt="">
+  </div>
+</dialog>
+
+<script>
+  var lb = document.getElementById('lb'),
+      lbImg = document.getElementById('lb-img'),
+      lbTitle = document.getElementById('lb-title');
+  document.querySelectorAll('.shot').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var img = b.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbTitle.textContent = b.dataset.title;
+      lb.showModal();
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+</script>
+</body>
+</html>
