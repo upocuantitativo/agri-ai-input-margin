@@ -1,0 +1,5 @@
+/* Correcciones de legibilidad (impeccable detect), 2026-11-24. Solo color y tamaño de letra.
+   Para deshacerlas: quitar el <link> a este fichero en el HTML. */
+footer { color: #64707c !important; }
+p.eyebrow { color: #64707c !important; }
+section > p.section-note { color: #64707c !important; }
